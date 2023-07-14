@@ -1,0 +1,11 @@
+<!-- stock_records.html -->
+
+<h1>Stock Records for {{ stock }}</h1>
+
+<ul>
+  {% for record in stock_records %}
+    <li>{{ record.date }} - {{ record.price }}</li>
+  {% empty %}
+    <li>No records found for this stock.</li>
+  {% endfor %}
+</ul>

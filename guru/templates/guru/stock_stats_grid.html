@@ -1,0 +1,10 @@
+{% for stock_stats in stock_stats_list %}
+  <div class="card">
+    <div class="card-header">
+      {{ stock_stats.stock }}
+    </div>
+    <div class="card-body">
+      <p>Average Price: {{ stock_stats.average_price }}</p>
+    </div>
+  </div>
+{% endfor %}
