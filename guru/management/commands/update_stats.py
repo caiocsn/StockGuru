@@ -9,6 +9,8 @@ class Command(BaseCommand):
         unique_stocks = PriceRecord.objects.values_list('stock', flat=True).distinct()
 
         for stock in unique_stocks:
+            existing_record = StockStats.objects.filter(stock = stock).first()
+            existing_record.delete() if existing_record else None
             stock_stats = StockStats.objects.create(stock=stock)
             stock_stats.save()
 

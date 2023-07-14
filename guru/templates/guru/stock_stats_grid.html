@@ -4,7 +4,10 @@
       {{ stock_stats.stock }}
     </div>
     <div class="card-body">
-      <p>Average Price: {{ stock_stats.average_price }}</p>
+      <p>Price: {{ stock_stats.most_recent_price }}</p>
+      <p>30d: {{ stock_stats.price_difference_30days }}</p>
+      <p>6m: {{ stock_stats.price_difference_6months }}</p>
+      <p>1y: {{ stock_stats.price_difference_1year }}</p>
     </div>
   </div>
 {% endfor %}
